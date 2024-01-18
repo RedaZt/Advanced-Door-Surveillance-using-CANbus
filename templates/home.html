@@ -1,0 +1,67 @@
+<html>
+
+<head>
+  <title>Home Page - Sling Academy</title>
+  <!-- <meta http-equiv="refresh" content="2" /> -->
+  <link href="{{ url_for('assests', path='/css/main.css') }}" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <a href="/" class="logo"><img src="../assests/images/logo-ensam.png"></img></a>
+    <nav>
+      <ul>
+        <li>
+          <a href="/"><button type="button">Système de Surveillance de Portes avec CANbus</button></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <!-- <h1>{{ message }}</h1>
+    <h3>The current time is: {{ current_time }}</h3> -->
+    <div class="dashboard-1">
+      <h1>Status</h1>
+      <ul class="door-wrapper">
+        <li class="door" id="door1">Door 1</li>
+        <li class="door" id="door2">Door 2</li>
+        <li class="door" id="door3">Door 3</li>
+      </ul>
+    </div>
+    <div class="dashboard-2">
+      <h1>Logs</h1>
+      <div class="logs-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <p>Time</p>
+              </th>
+              <th>
+                <p>Door id</p>
+              </th>
+              <th>
+                <p>Card id</p>
+              </th>
+              <th>
+                <p>User</p>
+              </th>
+            </tr>
+          </thead>
+          <!-- <tr><td><p>00:00</p></td><td><p>Reda</p></td></tr> -->
+          <tbody id="door-logs">
+            <!-- <tr>
+                <td>
+                  <p>{{ current_time }}</p>
+                </td>
+                <td><p>Maria Anders</p></td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="{{ url_for('assests', path='/js/app.js') }}"></script>
+</body>
+
+</html>
